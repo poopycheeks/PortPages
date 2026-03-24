@@ -1,0 +1,84 @@
+:root {
+  --text-color: #4a2b17;
+  --link-color: var(--background-color);
+  --sidebar-bg: #c5e0e6;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* View Banner */
+.view-banner {
+  width: 100%;
+  padding: 9px 20px;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+/* Side Bar */
+.sidebar {
+  background-color: #fffeee;
+  padding: 40px 24px 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Mobile View */
+@media only screen and (max-width: 599px) {
+  body {
+    background-color: #fce8ea; /* Mobile: pale blush */
+    font-size: 13px;
+  }
+
+  /* View Banner */
+  .view-banner::after {
+    content: "[Mobile View]";
+    color: #c5e0e6;
+  }
+}
+
+/* Tablet View */
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  body {
+    background-color: #c5e0e6; /* Tablet: lagoon blue */
+    font-size: 14px;
+  }
+
+  /* View Banner */
+  .view-banner::after {
+    content: "[Tablet View]";
+    color: #fce8ea;
+  }
+}
+
+/* Desktop View */
+@media only screen and (min-width: 900px) {
+  body {
+    background-color: #4a2b17; /* Desktop: chocolate brown */
+    font-size: 16px;
+  }
+
+  /* View Banner */
+  .view-banner::after {
+    content: "[Desktop View]";
+    color: #c5e0e6;
+  }
+}
